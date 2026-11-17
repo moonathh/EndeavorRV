@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EndeavorVR · Simulador de Combate a Fuego en Interiores</title>
+<meta name="description" content="Simulador de realidad virtual en Unreal Engine 5 con extintor háptico para aprender a combatir incendios en interiores.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#inicio">Endeavor<b>VR</b></a>
+  <button class="menu-btn" id="menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <ul id="links"><li><a href="#empresa">Empresa</a></li><li><a href="#simulador">Simulador</a></li><li><a href="#haptico">Háptico</a></li><li><a href="#codigo">Código</a></li><li><a href="#futuro">Futuro</a></li><li><a href="#contacto">Contacto</a></li></ul>
+</div></nav>
+
+<header class="hero" id="inicio"><div class="wrap">
+  <img class="logo-img" src="img/logo.png" alt="EndeavorVR">
+  <span class="tag">Realidad Virtual · Unreal Engine 5 · Arduino</span>
+  <h1>Aprende a apagar un incendio antes de que ocurra</h1>
+  <p>Simulador de Combate a Fuego en Interiores: practica en casa u oficina, de forma segura, con un extintor háptico que realmente puedes sostener.</p>
+  <a class="btn p" href="#simulador">Conocer el simulador</a><a class="btn s" href="#haptico">Ver el extintor háptico</a>
+</div></header>
+
+<section id="empresa"><div class="wrap">
+  <h2>Sobre EndeavorVR</h2>
+  <p class="lead">Somos una empresa que capacita a las personas para enfrentar situaciones que pueden ser peligrosas en la vida diaria. Usamos realidad virtual para practicar en un entorno seguro, donde equivocarse no cuesta nada, y estar preparado puede cambiarlo todo.</p>
+  <div class="grid">
+    <div class="card f"><div class="ico">🛡️</div><h3>Protección</h3><p>La seguridad de las personas es el centro de todo lo que diseñamos.</p></div>
+    <div class="card a"><div class="ico">🏠</div><h3>Cercanía</h3><p>Experiencias fáciles de entender, pensadas para toda la familia.</p></div>
+    <div class="card c"><div class="ico">🥽</div><h3>Innovación</h3><p>Realidad virtual y dispositivos físicos para aprender haciendo.</p></div>
+  </div>
+  <div class="note"><b>Nuestra misión:</b> ayudar a las personas a actuar con seguridad y confianza ante situaciones de riesgo cotidianas, a través de experiencias inmersivas.</div>
+</div></section>
+
+<section class="alt" id="simulador"><div class="wrap">
+  <h2>El simulador</h2>
+  <p class="lead">Dos escenarios realistas hechos en Unreal Engine 5, con dificultad progresiva. Primero aprendes, luego lo pones a prueba.</p>
+  <div class="grid">
+    <div class="card c"><div class="ico">🏢</div><h3>Modalidad Tutorial · Oficina</h3><p>Una oficina pequeña donde puedes combatir el fuego con facilidad mientras conoces los controles y el extintor.</p></div>
+    <div class="card f"><div class="ico">🏡</div><h3>Modalidad Práctica · Casa</h3><p>El interior de una casa: un espacio más grande donde apagar el incendio es más complejo y hay que moverse y decidir.</p></div>
+  </div>
+  <h3 style="margin:34px 0 12px;color:var(--head)">Al terminar, sabrás…</h3>
+  <ul class="ok">
+    <li>Cuándo conviene combatir el fuego y cuándo es mejor evacuar.</li>
+    <li>Usar un extintor en el orden correcto: quitar el seguro, apuntar a la base del fuego y accionar.</li>
+    <li>Mantener la calma ante el humo, el fuego y un lugar desconocido.</li>
+  </ul>
+  <div class="galeria">
+  <figure>
+    <img class="foto" src="img/oficina.jpeg" alt="Escenario de la oficina del simulador" loading="lazy">
+    <figcaption>Tutorial · Oficina</figcaption>
+  </figure>
+  <figure>
+    <img class="foto" src="img/casa.jpeg" alt="Escenario de la casa del simulador" loading="lazy">
+    <figcaption>Práctica · Casa</figcaption>
+  </figure>
+</div>
+</div></section>
+
+<section id="haptico"><div class="wrap">
+  <h2>El extintor háptico</h2>
+  <p class="lead">Para darle más inmersión a la simulación construimos un extintor portátil con Arduino UNO y materiales reciclados. Tiene seguro, palanca y vibra cuando lo accionas.</p>
+  <h3 style="color:var(--head)">¿Cómo se usa?</h3>
+  <ol class="steps">
+    <li><b>Quita el seguro</b><span>Presiona el botón de seguro para activarlo.</span></li>
+    <li><b>Apunta</b><span>Dirige el extintor a la base del fuego.</span></li>
+    <li><b>Aprieta</b><span>Mantén presionado el botón: el motor vibra.</span></li>
+    <li><b>Barre</b><span>Mueve de lado a lado hasta apagar las llamas.</span></li>
+  </ol>
+  <div class="two" style="margin-top:34px">
+    <div>
+      <h3 style="color:var(--head);margin-top:0">Materiales</h3>
+      <ul class="chips">
+        <li>🔌 Arduino UNO</li><li>🎮 Motor vibrador de un control de videojuegos</li><li>🔘 2 pulsadores</li>
+        <li>⚡ Resistencias de 440 Ω</li><li>⚡ Diodo</li><li>🧩 Protoboard</li><li>🪢 Jumpers</li><li>♻️ Materiales reciclados</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:var(--head);margin-top:0">Conexiones</h3>
+      <ul class="ok">
+        <li><b>Pin 2:</b> botón de encendido (palanca)</li>
+        <li><b>Pin 3:</b> botón de seguro</li>
+        <li><b>Pin 9 (PWM):</b> motor vibrador</li>
+      </ul>
+    </div>
+  </div>
+  <figure style="margin:26px 0 0">
+  <img class="foto" src="img/haptico.png" alt="Diseño del circuito del extintor háptico en Tinkercad" loading="lazy">
+  <figcaption>Circuito del háptico diseñado en Tinkercad</figcaption>
+</figure>
+</div></section>
+
+<section class="alt" id="codigo"><div class="wrap">
+  <h2>El código</h2>
+  <p class="lead">El motor solo se enciende si el seguro está activo y el botón está presionado, igual que un extintor real. Incluye antirrebote (40 ms), potencia limitada al ~90 % y un monitor serial para revisar el estado.</p>
+  <details>
+    <summary>Ver código de Arduino</summary>
+    <button class="copy" id="copy">Copiar código</button>
+    <pre id="code">const int botonEncender = 2;
+const int botonSeguro = 3;
+const int motor = 9;
+
+const int POTENCIA_MOTOR = 230;   
+
+bool seguroActivo = false;
+
+int ultimaLecturaSeguro = HIGH;
+int estadoSeguro = HIGH;
+
+unsigned long ultimoCambio = 0;
+const unsigned long tiempoRebote = 40;
+
+unsigned long ultimoMensaje = 0;
+const unsigned long intervaloMensaje = 200;  
+
+void setup() {
+  Serial.begin(9600);
+
+  pinMode(botonEncender, INPUT_PULLUP);
+  pinMode(botonSeguro, INPUT_PULLUP);
+
+  pinMode(motor, OUTPUT);
+  analogWrite(motor, 0);   // motor apagado al inicio
+}
+
+void loop() {
+  // botón de seguro
+  int lecturaSeguro = digitalRead(botonSeguro);
+
+  if (lecturaSeguro != ultimaLecturaSeguro) {
+    ultimoCambio = millis();
+    ultimaLecturaSeguro = lecturaSeguro;
+  }
+
+  if (millis() - ultimoCambio &gt;= tiempoRebote) {
+    if (lecturaSeguro != estadoSeguro) {
+      estadoSeguro = lecturaSeguro;
+
+      if (estadoSeguro == LOW) {
+        seguroActivo = !seguroActivo;   // alterna el estado del seguro
+      }
+    }
+  }
+
+  // botón de encendido
+  int lecturaEncender = digitalRead(botonEncender);
+
+  // limitar la potencia del motor
+  bool motorEncendido = (seguroActivo &amp;&amp; lecturaEncender == LOW);
+  analogWrite(motor, motorEncendido ? POTENCIA_MOTOR : 0);
+
+  // monitor serial
+  if (millis() - ultimoMensaje &gt;= intervaloMensaje) {
+    ultimoMensaje = millis();
+    Serial.print("Seguro: ");
+    Serial.print(seguroActivo ? "ACTIVADO" : "DESACTIVADO");
+    Serial.print(" | Encendido: ");
+    Serial.print(lecturaEncender);
+    Serial.print(" | Motor: ");
+    Serial.println(motorEncendido ? "ENCENDIDO" : "APAGADO");
+  }
+}</pre>
+  </details>
+</div></section>
+
+<section id="futuro"><div class="wrap">
+  <h2>¿Qué sigue?</h2>
+  <div class="grid" style="margin-top:22px">
+    <div class="card"><div class="ico">🍳</div><h3>Más escenarios</h3><p>Cocina, taller, bodega y lugares públicos, con distintos tipos de fuego.</p></div>
+    <div class="card"><div class="ico">🏆</div><h3>Evaluación</h3><p>Puntaje, tiempo de respuesta y retroalimentación al terminar.</p></div>
+    <div class="card"><div class="ico">🎛️</div><h3>Háptico mejorado</h3><p>Sensores de movimiento, sonido y un retroceso más realista.</p></div>
+    <div class="card"><div class="ico">🌎</div><h3>Más riesgos</h3><p>Sismos, primeros auxilios y fugas de gas.</p></div>
+  </div>
+</div></section>
+
+<section class="alt" id="contacto"><div class="wrap">
+  <h2>Contacto y equipo</h2>
+  <p class="lead">¿Quieres probar el simulador o saber más? Escríbenos.</p>
+  <div class="grid">
+    <div class="card"><h3>📧 Correo</h3><p>endeavorVR@lolqmal.com</p></div>
+    <div class="card"><h3>📱 Redes</h3><p>https://x.com/EndeavorVR</p></div>
+    <div class="card"><h3>👥 Equipo</h3><p>Jonathan Galindo, Patricia Méndez, Alex Gaytán, Ángelito Salazar, Miguel Alvarez.</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><b>EndeavorVR</b> · Capacitación inmersiva para situaciones de riesgo<br>© 2026 EndeavorVR. Todos los derechos reservados.</div></footer>
+
+<script>
+var menu=document.getElementById('menu'), links=document.getElementById('links');
+menu.addEventListener('click',function(){
+  var open=links.classList.toggle('open');
+  menu.setAttribute('aria-expanded',open);
+  menu.textContent=open?'✕':'☰';
+});
+links.addEventListener('click',function(e){
+  if(e.target.tagName==='A'){links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}
+});
+document.getElementById('copy').addEventListener('click',function(){
+  var t=document.getElementById('code').innerText, b=this;
+  var done=function(){b.textContent='¡Copiado!';setTimeout(function(){b.textContent='Copiar código'},1800)};
+  try{navigator.clipboard.writeText(t).then(done,done)}catch(e){done()}
+});
+</script>
+</body>
+</html>
